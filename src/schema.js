@@ -3,12 +3,12 @@ import { makeExecutableSchema } from 'graphql-tools';
 
 const typeDefs = `
     type Query {
-        hello: String
+        hello: String,
+        greet(name: String!): String
     }
-
 `;
 
-makeExecutableSchema({
+export default makeExecutableSchema({
     typeDefs: typeDefs,
     resolvers: resolvers
 })
