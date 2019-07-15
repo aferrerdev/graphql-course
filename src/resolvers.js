@@ -7,7 +7,7 @@ export const resolvers = {
         },
         greet(root, args) {
             console.log(args);
-            return 'Hello!';
+            return `Hello! ${args.name}`;
         }
     }
 };
