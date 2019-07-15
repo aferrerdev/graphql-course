@@ -4,12 +4,20 @@
   "description": "NodeJS + GraphQL Example: https://www.youtube.com/watch?v=Wl8O6wW4FJU",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist --source-maps",
+    "start": "babel-node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4"
   }
 }
