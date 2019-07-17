@@ -32,7 +32,12 @@ export const resolvers = {
             return newUser;
         },
         async deleteUser(_, { _id }) {
+            // Return the deleted document
             return await User.findByIdAndDelete(_id);
+        },
+        async updateUser(_, { _id, input }) {
+            // Return updated user
+            return await User.findByIdAndUpdate(_id, input, { new: true });
         }
     }   
 };
